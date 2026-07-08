@@ -1,0 +1,91 @@
+.data-table-container {
+  overflow-x: auto;
+  margin-top: 12px;
+  border-radius: 8px;
+}
+
+.planet-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Caption above the table, under the first <p> */
+.table-caption {
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-style: normal;
+  color: #111;
+  text-align: left;
+  margin: 16px 0 8px 0;
+  display: block;
+}
+
+/* ── Header row ── */
+.planet-data-table th {
+  background-color: rgb(14, 31, 78);
+  color: white;
+  font-weight: 600;
+  padding: 15px 12px;
+  border: 1px solid rgb(14, 31, 78);
+}
+
+/* Merged blank header above the two category columns */
+.planet-data-table th.th-blank {
+  background-color: white;
+  border: none;
+}
+
+/* ── Body cells ── */
+.planet-data-table td {
+  padding: 15px 12px;
+  border: 1px solid #ddd;
+}
+
+/* ── Alternating row stripe ── */
+.planet-data-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* ── Hover ── */
+.planet-data-table tbody tr:hover {
+  background-color: #e8f4ff;
+}
+
+/* ── Category cells (Terrestrial, Dwarf — full width of category area) ── */
+.planet-category {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: rgb(14, 31, 78);
+  background-color: #d6e8fb;
+  text-align: center;
+  padding: 15px 14px;
+  vertical-align: middle;
+  line-height: 1.4;
+}
+
+/* ── Jovian label (narrower — sits left of Gas/Ice Giants) ── */
+.planet-category--jovian {
+  width: 90px;
+  white-space: nowrap;
+}
+
+/* ── Gas Giants / Ice Giants cells ── */
+.planet-subcategory {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgb(14, 31, 78);
+  background-color: #e4f0fb;
+  text-align: center;
+  vertical-align: middle;
+  padding: 12px 14px;
+  width: 110px;
+}
+
+/* ── Planet name column ── */
+.planet-name-cell {
+  font-weight: 600;
+  text-align: left;
+  padding-left: 20px;
+}

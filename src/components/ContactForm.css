@@ -1,0 +1,148 @@
+.contact-form-section {
+  padding: 36px 40px;
+  background-color: white;
+  margin: 20px auto;
+  border-radius: 8px;
+  max-width: 1200px;
+  border: 2px dashed #4a90d9;
+}
+
+/* ── Heading ── */
+.form-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: rgb(14, 31, 78);
+  margin: 0 0 10px 0;
+}
+
+.form-subheading {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 0 0 28px 0;
+  line-height: 1.6;
+}
+
+/* ── Form rows ── */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+/* Row with textarea — align items to the top so textarea can grow */
+.form-row--stretch {
+  align-items: start;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Labels ── */
+.form-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #222;
+  font-size: 0.95rem;
+}
+
+.required-field {
+  color: #e63946;
+  margin-left: 2px;
+}
+
+/* ── Inputs ── */
+.form-input {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  height: 48px;
+  box-sizing: border-box;
+}
+
+/* ── Textarea ── */
+.form-textarea {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  resize: vertical;
+  min-height: 110px;
+  box-sizing: border-box;
+}
+
+/* ── Character counter ── */
+.char-counter {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 6px;
+}
+
+/* ── Error text ── */
+.error-text {
+  color: #e63946;
+  font-size: 0.82rem;
+  margin-top: 4px;
+}
+
+/* ── Submit ── */
+.submit-container {
+  margin-top: 10px;
+}
+
+.submit-button {
+  background-color: rgb(14, 31, 78);
+  color: white;
+  border: none;
+  padding: 14px 36px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.submit-button:hover {
+  background-color: rgb(22, 48, 120);
+}
+
+.submit-button:active {
+  transform: scale(0.98);
+}
+
+.submit-arrow {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* ── Fade-in animation ── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .contact-form-section {
+    padding: 24px 20px;
+  }
+}

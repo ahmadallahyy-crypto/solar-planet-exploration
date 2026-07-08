@@ -1,0 +1,105 @@
+/* ========== PLANET GRID ========== */
+
+.planet-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.planet-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  gap: 8px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.planet-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(14, 31, 78, 0.2);
+}
+
+.planet {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.planet-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2f2626;
+  text-align: center;
+  margin: 0;
+}
+
+/* ✅ Distance from Sun */
+.planet-distance {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #2f2626;
+  text-align: center;
+  margin: 0;
+}
+
+/* ── Loading & Error States ── */
+.planet-loading,
+.planet-error {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.1rem;
+  color: rgb(14, 31, 78);
+  grid-column: 1 / -1;
+}
+
+.planet-error {
+  color: #c0392b;
+}
+
+/* ── Responsive ── */
+@media (max-width: 992px) {
+  .planet-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .planet { height: 170px; }
+}
+
+@media (max-width: 768px) {
+  .planet-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .planet { height: 160px; }
+}
+
+@media (max-width: 576px) {
+  .planet-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .planet { height: 140px; }
+  .planet-name  { font-size: 0.85rem; }
+  .planet-distance { font-size: 0.78rem; }
+}
+
+@media (max-width: 400px) {
+  .planet-grid { grid-template-columns: 1fr; }
+  .planet { height: 180px; }
+}
+
+.planet-placeholder {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  background: #0e1f4e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00ccff;
+  font-size: 0.9rem;
+  border-radius: 8px;
+}
