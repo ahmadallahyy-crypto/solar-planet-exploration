@@ -89,8 +89,8 @@ const PlanetCard = ({ planet }) => {
 const PlanetList = () => {
   const sectionRef = useRef(null);
   const [planets, setPlanets] = useState(BASE_PLANETS);
-  const [_loading, setLoading] = useState(true);   // ✅ fixed: unused var suppressed
-  const [error, _setError] = useState(null);       // ✅ fixed: unused var suppressed
+  const [_loading, setLoading] = useState(true);   // ✅ fixed
+  const [error, _setError] = useState(null);       // ✅ fixed
 
   useEffect(() => {
     fetchPlanets()
